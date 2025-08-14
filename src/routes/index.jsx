@@ -19,7 +19,7 @@ const rootRoute = createRootRoute({
 
 const logInRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/log-in",
+  path: "/",
   beforeLoad: () => {
     if (isAuthenticated()) throw redirect({ to: "/dashboard" });
   },
@@ -30,7 +30,7 @@ const webEditorRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/webeditor",
   beforeLoad: () => {
-    if (!isAuthenticated()) throw redirect({ to: "/log-in" });
+    if (!isAuthenticated()) throw redirect({ to: "/" });
   },
   component: lazyRouteComponent(() => import("../pages/webEditor")),
 });
@@ -39,7 +39,7 @@ const dashboardRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/dashboard",
   beforeLoad: () => {
-    if (!isAuthenticated()) throw redirect({ to: "/log-in" });
+    if (!isAuthenticated()) throw redirect({ to: "/" });
   },
   component: lazyRouteComponent(() => import("../pages/dashboard")),
 });

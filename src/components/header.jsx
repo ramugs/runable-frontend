@@ -7,7 +7,7 @@ const Header = () => {
   const logout = () => {
     localStorage.clear();
     window.location.reload();
-    navigate({ to: "/log-in" });
+    navigate({ to: "/" });
   };
   return (
     <nav className="bg-black text-white h-[65px]">
