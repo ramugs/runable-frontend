@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.selected-outline {
+  outline: 2px dashed #4A90E2;
+  outline-offset: 2px;
+}
