@@ -1,12 +1,56 @@
-# React + Vite
+I have developed an application that allows users to copy and paste components, preview their design, and edit them before saving to the backend.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tech Stack
 
-Currently, two official plugins are available:
+- Frontend: Vite, React
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- State Management: Zustand
 
-## Expanding the ESLint configuration
+- Form handel : useForm hook
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Routing: TanStack Router
+
+- Caching & Data Fetching: TanStack Query
+
+- API Calls: Axios
+
+- Styling: Tailwind CSS
+
+- Backend: Node.js, Express
+
+- Database: MongoDB
+
+User Authentication
+Users log in with a username and password. If the provided credentials match an existing account, they can access their saved components. If the username or password is different, a new account will be created.
+
+Functionality
+
+- Users can create new components, edit them, and save them to the backend.
+
+- Each saved component is assigned a unique ID.
+
+- Users can select any of their previously created components for further editing.
+
+Editing Options Available:
+
+1. Component name
+
+2. Text content
+
+3. ext color
+
+4. Font size
+
+5. Font family
+
+6. Font weight
+
+7. Padding
+
+8. Margin
+
+9. Border width
+
+10. Border radius
+
+11. Border color
