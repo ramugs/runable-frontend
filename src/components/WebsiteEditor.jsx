@@ -128,12 +128,14 @@ const WebsiteEditor = ({ onIdCreated, onSave }) => {
     }
     if (!componentName.trim()) {
       alert("Please provide component name");
+      setLoading(false);
       return;
     }
     let html;
     if (!componentData?.id) {
       if (!htmlInput.trim()) {
         alert("Please paste HTML first");
+        setLoading(false);
         return;
       }
 

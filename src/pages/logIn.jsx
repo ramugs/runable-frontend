@@ -19,9 +19,7 @@ const LoginPage = () => {
     return data;
   };
 
-  const { userData, setUserData } = userStoreData();
-
-  console.log(userData);
+  const { setUserData } = userStoreData();
 
   const mutation = useMutation({
     mutationFn: loginUser,
@@ -34,6 +32,7 @@ const LoginPage = () => {
       console.error("Login failed:", error.response?.data || error.message);
     },
   });
+  console.log(mutation.isPending, "sdfsfsfsfsdfsf");
 
   const onSubmit = (formData) => {
     mutation.mutate({
@@ -118,7 +117,7 @@ const LoginPage = () => {
             type="submit"
             className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-black focus:outline-none focus:ring-2"
           >
-            Login
+            {mutation?.isPending ? "loading..." : "Login"}
           </button>
         </form>
 
